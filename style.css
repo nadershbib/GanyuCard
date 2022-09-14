@@ -1,0 +1,112 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.main-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("./awesomeBlue.png") center / cover no-repeat fixed;
+    overflow: hidden;
+    clip-path: circle(2.4% at 51% 47%);
+    animation: show-bg 1.2s 0.5s forwards;
+}
+
+@keyframes show-bg {
+
+   to {
+    clip-path: circle(72.3% at 51% 49%);
+   }
+    
+}
+
+
+
+.container{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.container > .triangle-img{
+    width: 550px;
+    transform: rotate(180deg);
+    position: absolute;
+    top: -246px;
+    left: -160px;
+    animation: triangle-spin 1s 1.7s forwards;
+
+}
+
+@keyframes triangle-spin {
+
+    
+    to{
+        transform: rotate(30deg);
+    }
+   
+    
+}
+
+.container > img:nth-child(2){
+    transform: translate(230px,0px) rotate(360deg);
+    opacity: 0;
+    animation: show-text 1.5s 5s forwards;
+}
+
+@keyframes show-text {
+
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+    
+}
+
+.character{
+    position: absolute;
+    top: -211px;
+    left: -124px;
+    width: 410px;
+    height: 380px;
+    overflow: hidden;
+    transform: rotate(30deg);
+
+}
+
+.character > img{
+    
+    width: 500px;
+    transform: rotate(333deg) translate(-70px, -28px);
+    animation: character-show 2s 2.8s forwards;
+    opacity: 0;
+}
+
+@keyframes character-show {
+    from {
+         transform: rotate(333deg) translate(-70px, 422px);
+     }
+     to{
+        opacity: 1;
+     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
